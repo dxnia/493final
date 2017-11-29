@@ -1,0 +1,1 @@
+We had people working on separate parts so haven’t connected everything together yet. This zip includes our homepage html and css, our “add event” html and css, and our start to implementing the Google maps api.
