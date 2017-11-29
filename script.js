@@ -1,8 +1,20 @@
-var app = angular.module('493Search', []);
+var app = angular.module('493FinalProj', []);
 
-app.controller('searchResult',[ '$scope', '$http', 'Movies', function($scope, $http, Movies) {
+app.controller('searchPage',[ '$scope', '$http', function($scope, $http) {
+	console.log("i got here");
 	
 
+
+	$scope.add = function(city) {
+		console.log("worked");
+
+		 	alert("add function works " + city);
+
+   		}; 
+
+
+
+   		
 }]);
 
 

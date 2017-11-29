@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="homepage.css">
 
 <!-- HTML -->
-<body>
-  <div class='outer-container'>
+<body ng-app = "493FinalProj">
+  <div class='outer-container' ng-controller="searchPage">
     <div class='game-window'>
 
       <div class ='main'>
@@ -21,8 +21,8 @@
         <br>
 
           <form style="text-align: center;">
-            <input type="text" placeholder="Where to?" name="cities"><br>
-            <input type="submit" value="Submit">
+            <input type="text" ng-model="city" placeholder="Where to?" name="cities"><br>
+            <input type="submit" ng-click='add(city)' value="Submit">
           </form>
           
         <!-- <p>Space/Right Click: Shoot</p>
