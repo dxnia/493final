@@ -1,0 +1,75 @@
+<html>
+
+<title>Alien Invasion</title>
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/search.js"></script>
+<!-- CSS -->
+
+<link rel="stylesheet" type="text/css" href="homepage.css">
+
+<!-- HTML -->
+<head>
+      <script src = "https://maps.googleapis.com/maps/api/js"></script>
+
+      
+   </head>
+<body onload = "loadMap()">
+<div id = "sample" style = "width:900px; height:580px;"></div>
+
+  <div class='outer-container'>
+    <div class='game-window' id="wrapper">
+
+
+
+      <div class ='main'>
+        <h1>Explore Destinations</h1>
+        <br>
+
+          <form>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+          
+        <!-- <p>Space/Right Click: Shoot</p>
+        <p>Mouse: M ove the target/aim</p>-->
+        <br><br>
+        <!-- <button type="button" id="button_start">Start Alien Invasion</button> -->
+      </div>
+
+      <div class="bottom"></div>
+    </div>
+
+
+    <div class='navigation' style='text-align: center'>
+      <br><br><br>
+      <img class = "avatar-circle" src = "azba.png">
+      <br><br><br>
+      <a href = "/">BROWSE</a><br>
+      <a href = "/">MY TRIPS</a><br>
+      <a href = "/">ADD NEW TRIP</a>
+      <!-- <br>
+      <p>score:</p>
+      <h1 id='score-box'>0 points</h1>
+      <p>rate:</p>
+      <h1 id='rate-box'>0%</h1>
+      <button type="button" id="button_settings">Open Settings Panel</button>
+
+      <div class="setting-panel" style="display:none;">
+        
+        <br>Alien Spawning Rate (# per second)
+        <input type="text" id="input_spawn" placeholder="Min: 0.2, Max: 4"><br><br>
+        Mute Audio
+        <input type="checkbox" id="audio" value="audio_on" checked><br><br>
+        <button type="button" id="update_settings">UPDATE</button>
+      </div> -->
+
+    </div>
+  </div>
+</body>
+
+</html>
