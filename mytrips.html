@@ -1,0 +1,91 @@
+<html>
+
+<head> 
+  <title>Itinerary — My Trips</title>
+    <!-- Optional theme -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    Angular Material Library
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
+
+    <script src="script.js"></script>
+  </head>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="mytrips.css">
+
+<!-- HTML -->
+<body ng-app = "493FinalProj">
+  <div class='outer-container' ng-controller="myTripsPage">
+    <div class='game-window'>
+
+      <!-- <div class='add-trip-form-temp' ng-hide="viewTripForm">
+        <form>
+          Title your trip: <input type="text" ng-model="trip_title"><br><br>
+          Where are you going? <input type="text" ng-model="destination"><br><br>
+          Start date: <input type="text" ng-model="start_date"><br><br>
+          End date: <input type="text" ng-model="end_date"><br><br>
+          <input type="submit" ng-click='submitNewTrip(trip_title, destination, start_date, end_date)' value="Submit">
+          <input type="submit" ng-click='viewTripForm = false' value="Cancel">
+
+        </form>
+      </div> -->
+      <p class="add-trip-button" ng-click="submitNewTrip()">+</p>
+
+
+      <div class ='mytrips'>
+        <h2>UPCOMING</h2>
+
+        <div class='scrolling_trip_row'>
+
+          <span ng-repeat = "trip in upcomingTrips">
+          
+            <div class='trip_entry' style="background-image:url('{{trip.image}}');">
+              <div id="trip_title_dates">
+                <span style="color:#101010;">{{ trip.title }}</span><br>
+                <span style="font-size:11px; line-height: 15px;">{{(trip.start_date | date : 'MMM ' | uppercase) + (trip.start_date | date : 'dd')}} - {{ (trip.end_date | date : 'MMM ' | uppercase) + (trip.end_date | date : 'dd, yyyy')}}</span>
+
+              </div>
+            </div>
+
+          </span>
+        </div>
+ 
+
+        <h2>COMPLETED</h2>
+
+        <div class='scrolling_trip_row'>
+
+          <span ng-repeat = "trip in completedTrips">
+          
+            <div class='trip_entry' style="background-image:url('{{trip.image}}');">
+              <div id="trip_title_dates">
+                <span style="color:#101010;">{{ trip.title }}</span><br>
+                <span style="font-size:11px; line-height: 15px;">{{ (trip.start_date | date : 'MMM ' | uppercase) + (trip.start_date | date : 'dd') }} - {{ (trip.end_date | date : 'MMM ' | uppercase) + (trip.end_date | date : 'dd, yyyy') }}</span>
+              </div>
+            </div>
+
+          </span>
+        </div>
+      </div>
+
+
+    
+    </div>
+    <div class='status-window' style='text-align: center'>
+      <br><br><br>
+      <img class = "avatar-circle" src = "images/azba.png">
+      <br><br><br>
+      <a href = "/">BROWSE</a><br>
+      <a href = "/mytrips">MY TRIPS</a><br>
+      <a href = "/addtrip">ADD NEW TRIP</a>
+      <!-- <button ng-click="viewTripForm = true">add new trip </button> -->
+    </div>
+
+
+  </div>
+</body>
+
+</html>
