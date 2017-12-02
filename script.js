@@ -91,6 +91,74 @@ app.controller('searchPage',[ '$scope', '$http', 'Places', function($scope, $htt
 }]);
 
 
+app.controller('myTripsPage',[ '$scope', '$http', function($scope, $http) {
+	console.log("woohoo seeing my trips");
+
+  $scope.viewAddTripForm = false;
+  $scope.toggleModal = function() {
+      $scope.viewAddTripForm = !$scope.viewAddTripForm;
+  };
+
+  $scope.upcomingTrips = [
+    {
+      title: 'South East Asia Travels',
+      image: 'images/SEAtravelstrip.png',
+      start_date: new Date('2018', '02', '18'),
+      end_date: new Date('2018', '02', '29'),
+    },
+    {
+      title: 'Off to Toronto',
+      image: 'images/torontotrip.png',
+      start_date: new Date('2018', '06', '03'),
+      end_date: new Date('2018', '06', '15'),
+    }
+  ];
+
+  $scope.completedTrips = [
+    {
+      title: 'Tokyo and Kyoto',
+      image: 'images/japantrip.png',
+      start_date: new Date('2017', '07', '02'),
+      end_date: new Date('2017', '07', '11'),
+    },
+    {
+      title: 'Heading to India!',
+      image: 'images/udaipurtrip.png',
+      start_date: new Date('2017', '02', '10'),
+      end_date: new Date('2017', '02', '23'),
+    },
+    {
+      title: 'Ski Trip!',
+      image: 'images/skitrip.png',
+      start_date: new Date('2016', '11', '22'),
+      end_date: new Date('2016', '11', '27'),
+    },
+    {
+      title: 'Visiting the Capital',
+      image: 'images/dctrip.jpg',
+      start_date: new Date('2016', '05', '16'),
+      end_date: new Date('2016', '05', '18'),
+    }
+  ];
+
+  $scope.submitNewTrip = function() {
+    console.log("Adding new trip!");
+
+    var new_trip = {
+      title: 'New Trip!',
+      image: 'images/dctrip.jpg',
+      start_date: new Date('2018', '11', '22'),
+      end_date: new Date('2018', '11', '27'),
+    }
+
+    $scope.upcomingTrips.push(new_trip);
+    console.log ("New Trip Created!");
+
+   };
+
+}]);
+
+
 
 app.factory('Places', function($http) {
 
